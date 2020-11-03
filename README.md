@@ -5,4 +5,4 @@
 <p  align="right"><a href="https://github.com/saharzeinivand/TERM_3991/tree/main/AdvancedSoftwareEngineering">پروژه درس مهندسی نرم افزار</a></p>
 <p  align="right"><a href="https://github.com/saharzeinivand/TERM_3991/tree/main/SEMINAR">پروژه درس متدولوژی ایحاد نرم افزار</a></p>
 <p  align="right"><a href="https://github.com/saharzeinivand/TERM_3991/tree/main/SoftwareArchitecture">پروژه درس معماری نرم افزار</a></p>
-<p  align="right"><a href="https://github.com/saharzeinivand/TERM_3991/tree/main/SoftwareDevelopmentMethodologies">پروژه درس سمینار</a></p>
+<p  align="right"><a href="https://github.com/saharzeinivand/TERM_3991/tree/main/SEMINAR">پروژه درس سمینار</a></p>
