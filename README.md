@@ -9,9 +9,15 @@
 <p align="right"><a href="https://github.com/saharzeinivand/TERM_3991/projects/1">تقسیم کار</a></p>
 
 ----------------------------------
-## مقالات
+## مقاله
 
 - [Designing_a_Strategic_Information_System](https://github.com/saharzeinivand/Seminar/blob/main/Article/Designing_a_Strategic_Information_System.pdf)
+
+-------------------------
+## کتاب
+
+- [Information systems development: methodologies, techniques and tools,David avison,Guy fitzgerald](https://www.amazon.com/INFORMATION-SYSTEMS-DEVELOPMENT-David-Avison/dp/0077114175)
+
 # گروه
 
 1. G-MS01
