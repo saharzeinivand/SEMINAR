@@ -9,6 +9,9 @@
 <p align="right"><a href="https://github.com/saharzeinivand/TERM_3991/projects/1">تقسیم کار</a></p>
 
 ----------------------------------
+## مقالات
+
+- [Designing_a_Strategic_Information_System](https://github.com/saharzeinivand/Seminar/blob/main/Article/Designing_a_Strategic_Information_System.pdf)
 # گروه
 
 1. G-MS01
