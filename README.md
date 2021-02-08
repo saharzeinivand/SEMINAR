@@ -19,7 +19,8 @@
 - [Information systems development: methodologies, techniques and tools,David avison,Guy fitzgerald](https://www.amazon.com/INFORMATION-SYSTEMS-DEVELOPMENT-David-Avison/dp/0077114175)
 
 --------------------
-
+# تمرین های دانشگاه شریف
+- [تمرین شماره یک](http://sharif.edu/~ramsin/index_files/SDMAns1_196.pdf)
 # گروه
 
 1. G-MS01
