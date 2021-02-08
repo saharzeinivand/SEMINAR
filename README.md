@@ -20,7 +20,7 @@
 
 --------------------
 # تمرین های دانشگاه شریف
-- [تمرین شماره یک](http://sharif.edu/~ramsin/index_files/SDMAns1_196.pdf)
+- [Assignments](http://sharif.edu/~ramsin/index_files/gradcourse_SDM.htm)
 # گروه
 
 1. G-MS01
