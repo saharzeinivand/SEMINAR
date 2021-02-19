@@ -21,6 +21,10 @@
 --------------------
 # تمرین های دانشگاه شریف
 - [Assignments](http://sharif.edu/~ramsin/index_files/gradcourse_SDM.htm)
+
+-------------
+# روش تحقیق در پایان نامه 
+- [روش تحقیق در پایان نامه چیست؟](https://sina-pub.ir/fa/post/rosh-thqiq-dar-paian-name-chist)
 # گروه
 
 1. G-MS01
