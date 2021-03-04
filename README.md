@@ -13,7 +13,7 @@
 
 - [Designing_a_Strategic_Information_System](https://github.com/saharzeinivand/Seminar/blob/main/Article/Designing_a_Strategic_Information_System.pdf)
 - [Teaching Modern Software Development Techniques at University](https://github.com/saharzeinivand/Seminar/blob/main/Article/Teaching%20Modern%20Software%20Development%20Techniques%20at%20University.pdf)
-- [Teaching Software Design Techniques in University Courses](https://github.com/saharzeinivand/Seminar/blob/main/Article/Teaching%20Software%20Design%20Techniques%20in%20University%20Courses.pdf)
+
 
 -------------------------
 ## کتاب
