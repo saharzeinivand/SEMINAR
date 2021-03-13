@@ -1,0 +1,107 @@
+\chapter{عدد نظم مدول همولوژی \lr{Tor}}\label{regularity-asli}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% به دستورات زیر دست نزنید
+\thispagestyle{empty}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large{مقدمه:}}
+در سراسر این فصل، $S=K[x_1,\ldots,x_n]$ حلقه چندجمله‌ای‌ با ساختار استاندارد مدرج روی میدان $K$ و ایده‌ال ماکسیمال همگن ${\mm}=(x_1,\ldots,x_n)$ است.
+بعد کرول مدول $M$ را با $\dim M$ و بعد فضای برداری $M$ را با $\dim_KM$ نمایش می‌دهیم. برای $S$-مدول مدرج متناهی مولد $M$ و ایده‌ال $I$ از $S$ با توجه به نتیجه
+\ref{codimM}،
+$\codim M=n-\dim M$
+و
+$ \codim I=n-\dim I$.\\
+همان طور که در تعریف \ref{dimR/I}،
+بیان شد منظور از $\dim I$ همان $\dim S/I$ است. \\
+در این فصل برای عدد نظم $S$-مدول مدرج متناهی مولد $M$ از تعابیر معادل آن که در بخش \ref{sec mumford}
+بیان شد استفاده می‌کنیم یعنی
+$$\reg(M)=\max_j\left\{\reg H^j_{\mm}(M)+j\right\}$$
+و
+$$\reg(M)=\max_p\left\{ \reg \Tor^S_p(M,K)-p\right\}$$
+و یا به عبارتی با توجه به ملاحظه \ref{ti}،
+$$\reg(M)=\max_p\left\{ t_p(M)-p\right\}$$
+که در آن
+$t_p(M)=\reg\Tor^S_p(M,K)=\max\{j: \beta_{ij}\neq 0\}$.\\
+اگر $M=0$ تعریف می‌کنیم $\reg(M)=-\infty$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% شروع بخش اول
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{{کران روی عدد نظم کوهمولوژی موضعی \lr{Tor}}}
+در این بخش به بیان یک قضیه اساسی می‌پردازیم که برای اثبات آن نیازمند به ابزار کارآمد دنباله طیفی در فصل
+\ref{spectral3}
+هستیم.
+\begin{theo}\label{reg-asli}
+فرض کنید $M$ و $N$ دو $S$-مدول مدرج متناهی مولد و $j$ و $k$ اعدادی صحیح باشند و $\dim\Tor^S_1(M,N)\leq 1$. در این صورت برای هر $p$ و $q$ که
+$p+q=n-j+k$،
+$$\reg H^j_{\mm}\big(\Tor^S_k(M,N)\big)\leq \max\{X,Y,Z\}$$
+که در آن
+\begin{flushleft}
+$X=t_p(M)+t_q(N)-n$
+\end{flushleft}
+\begin{flushleft}
+$Y=\underset{p'>p}{\underset{p'+q'=n-j+k}{\max}}\Big\{t_{p'}(M)+\reg H^{n-q'}_{\mm}(N)\Big\}$
+\end{flushleft}
+\begin{flushleft}
+$Z=\underset{p'<p}{\underset{p'+q'=n-j+k}{\max}}\Big\{\reg H^{n-p'}_{\mm}(M)+t_{q'}(N)\Big\}.$
+\end{flushleft}
+\end{theo}
+
+
+
+
+\begin{align*}
+\lim_{n\rightarrow \infty } \dfrac{{\Big( (n+1) (n+2)... (n+n)\Big)}^{1/n}}{n}&=\lim_{n\rightarrow \infty } \dfrac{{\Big(n^n (1+1/n) (1+2/n)... (1+n/n)\Big)}^{1/n} }{n} \\
+&=\lim_{n\rightarrow \infty} {\Big((1+1/n) (1+2/n)... (1+n/n)\Big)}^{1/n}=y
+\end{align*}
+حال از طرفین $ln$ میگیریم لذا چون لگاریتم ضرب به جمع تبدیل میشه پس داریم:
+\begin{align*}
+\lim_{n\rightarrow \infty} ln (y)&=\lim_{n\rightarrow \infty}\dfrac{1}{n} \sum_{i=1}^{i=n} ln(1+i/n) \\
+&= \int_{0}^{1} ln(1+x) dx=2ln2-1=ln4-1=ln 4-ln e=ln 4/e
+\end{align*}
+لذا
+$y= e^{(ln(4/e)}=4/e$\\
+فرض کنیم
+$C=\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix} $
+یک ماتریس وارونپذیر و
+$A=\begin{bmatrix}
+4 & -1 \\
+-2 & 3
+\end{bmatrix} $
+و $D$ یک ماتریس قطری مرتبه 2 باشه به طوری که
+$D=C^{-1}AC$
+در این صورت با محاسبه دترمینان داریم:
+$$ \vert D \vert = {\vert C \vert}^{-1} \vert A \vert \vert C\vert \Longrightarrow \vert D \vert = {\vert A \vert}=10$$
+پس حاصلضرب درایه های روی قطر ماتریس قطری $D$ برابر 10 است. چون در فرض سوالتون شرطی روی ماتریس قطری قرار نداده پس قرار میدهیم.
+$D=\begin{bmatrix}
+2 & 0 \\
+0 & 5
+\end{bmatrix}
+$
+پس داریم:
+$$
+A=\begin{bmatrix}
+4 & -1 \\
+-2 & 3
+\end{bmatrix}=\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix} \begin{bmatrix}
+2 & 0 \\
+0 & 5
+\end{bmatrix} \begin{bmatrix}
+d & -b \\
+-c & a
+\end{bmatrix}.\dfrac{1}{ad-bc}
+$$
+با محاسبه خواهیم داشت:
+$C= \begin{bmatrix}
+a & b \\
+2a & -b
+\end{bmatrix}$
+که در آن $a$ و $b$ مقادیر ناصفر هستند.
+${ \pmb\sigma} $
+

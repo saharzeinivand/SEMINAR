@@ -1,0 +1,128 @@
+\chapter{دنباله‌های طیفی}\label{spectral3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% به دستورات زیر دست نزنید
+\thispagestyle{empty}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+در این فصل به تعریف دنباله طیفی\LTRfootnote{Spectral sequence}
+می‌پردازیم. قبل از آن باید با مفاهیمی مانند همبافت دوگانه، همبافت مجتمع و کاپل دقیق آشنا شد. در واقع این فصل ابزاری قوی به ما معرفی می‌کند که در فصل \ref{regularity-asli} در اثبات قضیه اساسی \ref{reg-asli}، آن را به کار می‌گیریم.
+\section{{همبافت دوگانه}}
+\begin{definition}
+یک مدول مدرج دوگانه $M=(M_{(p,q)})_{(p,q)\in\Bbb Z\times \Bbb Z}$ ، خانواده‌ای اندیس‌گذاری شده از $R$-مدول‌هاست. که معمولاً به صورت $M_{\bullet\bullet}$ نمایش می‌دهیم.\\
+می‌توان یک مدول مدرج دوگانه را روی صفحه مختصات نمایش داد.
+\end{definition}
+\begin{definition}
+فرض کنید $M$ و $N$ دو مدول مدرج دوگانه و $(a,b)\in\Bbb Z\times \Bbb Z$ باشد. یک نگاشت مدرج دوگانه از درجه‌ی $(a,b)$ نمایش داده شده به صورت $f:M\longrightarrow N$، خانواده‌ای است از همریختی‌های
+$f=\left(f_{(p,q)}:M_{(p,q)}\longrightarrow N_{(p+a,q+b)}\right)_{(p,q)\in\Bbb Z\times \Bbb Z}$ و می‌نویسیم $\degi(f)=(a,b)$.
+\end{definition}
+\begin{theo}
+فرض کنید
+$M\xrightarrow{f}N\xrightarrow{g} P$
+نگاشت‌هایی مدرج دوگانه با درجه‌های به ترتیب $(a,b)$ و $(a',b')$ باشند آنگاه ترکیب $gof$ یک نگاشت مدرج دوگانه از درجه $(a+b,a'+b')$ است.
+\end{theo}
+\begin{proof}
+واضح است.
+\end{proof}
+\begin{nok-def}
+خانواده‌ی $R$-مدول‌های مدرج دوگانه و نگاشت‌های مدرج دوگانه تشکیل یک رسته می‌دهند.
+حال دقیق بودن یک دنباله در این رسته را تعریف می‌کنیم.\\
+اگر $M'=(M'_{(p,q)})_{(p,q)\in \Bbb Z^2}$ و $M=(M_{(p,q)})_{(p,q)\in \Bbb Z^2}$ دو مدول مدرج دوگانه باشند در این صورت $M'$ یک
+زیرمدول $M$ است اگر $M'_{(p,q)}\subseteq M_{(p,q)}$ برای هر $(p,q)\in\Bbb Z^2$.
+لذا نگاشت شمول یک نگاشت مدرج دوگانه از درجه $(0,0)$ است و اگر $M'\subseteq M$ باشد آنگاه
+مدول خارج قسمتی
+\linebreak
+$M/M'=\left(M_{(p,q)}/M'_{(p,q)}\right)_{(p,q)\in\Bbb Z^2}$ یک مدول مدرج دوگانه است
+و نگاشت طبیعی $M\longrightarrow M/M'$ یک نگاشت مدرج دوگانه از درجه $(0,0)$ است.\\
+و حال اگر $f:M\longrightarrow N$ یک نگاشت مدرج دوگانه از درجه $(a,b)$ باشد آنگاه نگاشت شمول $\kernn f=(\kernn f_{(p,q)})\longrightarrow (M_{(p,q)})$، به طور طبیعی مدرج دوگانه است،
+از طرف دیگر برای هر $(p,q)$، تعریف کنیم
+$$\Ima f=(\Ima f_{(p-a,q-b)})\subseteq (N_{(p,q)})_{(p,q)\in\Bbb Z^2}$$
+بنابراین دقیق بودن رشته $A\xrightarrow{f}B\xrightarrow{g} C$ بدین معناست که $\Ima f=\kernn g$ و این یعنی برای هر $(p,q)\in\Bbb Z^2$،
+$\Ima f_{(p-a,q-b)}=\kernn~g_{(p,q)}$.\\
+فرض کنید مثلث $(\mathbf{A},\mathbf{B},\mathbf{C},\alpha,\beta,\gamma)$ از مدول‌‌ها و نگاشت های مدرج دوگانه زیر
+\begin{displaymath}
+\xymatrix{
+\mathbf{A} \ar[rr]^{\alpha}& &
+\mathbf{B} \ar[ld]^{\beta} \\
+& \mathbf{C}\ar[lu]^{\gamma} &}
+\end{displaymath}
+در هر رأس دقیق باشد یعنی $\kernn \alpha=\Ima \gamma$ و $\Ima \alpha=\kernn \beta$ و $\Ima \beta=\kernn \gamma$.
+این مثلث دقیق در واقع بخشی از یک دنباله دقیق و طولانی برای هر $(p,q)\in\Bbb Z^2$ است. حال اگر $\alpha$ و $\beta$ و $\gamma$ نگاشت هایی مدرج دوگانه به ترتیب از درجه های $(a,a')$ و $(b,b')$ و $(c,c')$ باشند برای
+$(p,q)\in\Bbb Z^2$
+دنباله دقیق و طولانی زیر را داریم
+$$\cdots\longrightarrow\mathbf{B}_{(p-b-c,,q-b'-c')}\xrightarrow{\beta}\mathbf{C}_{(p-c,q-c')}\xrightarrow{\gamma} \mathbf{A}_{(p,q)}\xrightarrow{\alpha}\mathbf{B}_{(p+a,q+a')}\xrightarrow{\beta}\mathbf{C}_{(p+a+b,q+a'+b')}\rightarrow\cdots$$
+\end{nok-def}
+\begin{definition}
+یک
+همبافت دوگانه\LTRfootnote{Bicomplex or Double complex}،
+سه‌تایی مرتب مانند $(M,d',d'')$ است که در آن
+\linebreak
+$M=\left(M_{p,q}\right)$
+مدول مدرج دوگانه و $d',d'':M\longrightarrow M$ دیفرانسیل‌هایی مدرج دوگانه
+هستند با درجه‌های
+$\degi(d')=(-1,0)$
+و
+$\degi(d'')=(0,-1)$
+که خاصیت پادجابجایی\LTRfootnote{Anticommutative} دارند یعنی
+$$d'_{p,{q-1}}d''_{p,q}+d''_{{p-1},q}d'_{p,q}=0$$
+دقت شود که منظور از دیفرانسیل‌های $d'$ و $d''$ یعنی این که $d'od'=0$ و $d''od''=0$.\\
+هر همبافت دوگانه را می‌توان در صفحه مختصات $p$ و $q$ نمایش داد. بدین صورت که هر مدول $M_{p,q}$ با نقطه‌ی $(p,q)$ در این صفحه نظیر می‌‌شود(شکل \ref{fig:bicomplex}).\\
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+scale=.75,
+axis/.style={very thick, ->, >=stealth'},
+important line/.style={thick},
+dashed line/.style={dashed, thin},
+pile/.style={thick, ->, >=stealth', shorten <=2pt, shorten
+>=2pt},
+every node/.style={color=black}
+]
+\draw[color=gray] (-0.5,-0.5) grid (5.7,5.7);
+\draw[axis] (-0.5,0) -- (6,0) node(xline)[right]
+{$p$};
+\draw[axis] (0,-0.5) -- (0,6) node(yline)[above] {$q$};
+\fill[black] (3,3) circle (2pt) node[right]{$M_{3,3}$};
+\fill[black] (2.6,3) circle (0.2pt) node[above]{$d'$};
+\fill[black] (3,2.5) circle (0.2pt) node[right]{$d''$};
+\fill[black] (4.6,5) circle (0.2pt) node[above]{$d'$};
+\fill[black] (5,4.5) circle (0.2pt) node[right]{$d''$};
+\draw[pile] (3,3) -- (3,2);
+\draw[pile] (3,3) -- (2,3);
+\fill[black] (2,2) circle (2pt) node[right] {$M_{2,2}$};
+\draw[pile] (2,2) -- (2,1);
+\draw[pile] (2,2) -- (1,2);
+\fill[black] (5,5) circle (2pt) node[right]{$M_{p,q}$};
+\draw[pile] (5,5) -- (5,4) ;
+\draw[pile] (5,5) -- (4,5);
+\end{tikzpicture}
+\caption{همبافت دوگانه}
+\label{fig:bicomplex}
+\end{figure}
+بنابراین برای هر $p$ و $q$
+دیفرانسیل‌ $d'_{p,q}:M_{p,q}\longrightarrow M_{{p-1},q}$ نقاط را یک واحد به سمت چپ و دیفرانسیل
+$d''_{p,q}:M_{p,q}\longrightarrow M_{p,{q-1}}$
+نقاط را یک واحد به سمت پایین منتقل می‌کند و سطرهای $M_{*,q}$ و ستون‌های $M_{p,*}$ همبافت هستند و همچنین تساوی
+$d'_{p,{q-1}}d''_{p,q}=-d''_{{p-1},q}d'_{p,q}$
+بیان می‌کند که هر مربع در نمودار شکل\ref{fig:bicomplex}، پادجابجایی است.
+\end{definition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% شروع بخش دوم
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{{صافی و کاپل دقیق}}
+\begin{definition}
+فرض کنید $\mathscr{A}$ یک رسته آبلی باشد. رسته تمام همبافت‌های در $\mathscr{A}$ را با نماد $\mathbf{Comp}(\mathscr{A})$ نمایش می‌دهیم.\\
+همبافت $(\mathbf{A_{\bullet}},\delta_{\bullet})$ را یک زیر همبافت
+$(\mathbf{C_{\bullet}},d_{\bullet})$
+گوئیم هرگاه یک نگاشت زنجیری $i:\mathbf{A_{\bullet}}\longrightarrow\mathbf{C_{\bullet} }$ چنان باشد که
+برای هر $n$ نگاشت $i_n$ یک به یک باشد و در رسته $\mathbf{Comp}(\mathbf{Mod})$ همبافت
+$(\mathbf{A_{\bullet}},\delta_{\bullet})$
+یک زیر همبافت
+$(\mathbf{C_{\bullet}},d_{\bullet})$
+است هرگاه برای هر $n$ داشته باشیم $A_n$ زیرمدول $C_n$ و $\delta_n=d_n|_{A_n}$.
+\begin{displaymath}
+\xymatrix{
+\ldots\ar[r] &C_{n+1} \ar[r]^{d_{n+1}}&C_n\ar[r]^{d_n}&C_{n-1}\ar[r] &\ldots \\
+\ldots\ar[r] &A_{n+1} \ar[r]_{\delta_{n+1}}\ar[u]^{i_{n+1}}&A_n\ar[r]_{\delta_{n}}\ar[u]^{i_n}&A_{n-1}\ar[r] \ar[u]^{i_{n-1}}&\ldots
+}
+\end{displaymath}
+\end{definition}

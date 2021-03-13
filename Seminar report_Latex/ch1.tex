@@ -1,0 +1,129 @@
+%نام فصل اول خود را جلوی چپتر بنویسید
+\chapter{پیش نیازها}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% به دستورات زیر دست نزنید
+\thispagestyle{empty}
+%برای عددی شدن صفحات
+\pagenumbering{arabic}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% فصل اول خود را از اینجا شروع کنید
+در اين فصل تعاریف و قضایایی از جبر جابجایی و همولوژی را که نقش مهمی در فهم بهتر مطالب دارند، یادآور می‌شویم. فرض ما بر این است که خواننده با مفاهیم جبر پیشرفته آشنایی دارد. در سرتاسر اين پايان‌نامه، منظور ازحلقه‌ی
+$R$،
+حلقه‌ای جابجایی و يكدار است.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%شروع بخش اول
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{{مفاهیم و قضایایی از جبر جابجایی}}
+\begin{definition}
+فرض کنید $I$ ایده‌الی سره از حلقه‌ی $R$ باشد، $V(I)$ را به صورت زیر تعریف می‌کنیم
+$$ V(I)=\big\{{\pp}\in\Spec(R): ~~I\subseteq {\pp}\big\}.$$
+\end{definition}
+\begin{definition}[{\large تکیه‌گاه} ]
+فرض کنید $M$ یک $R$-مدول باشد، تکیه‌گاه
+$M$
+را که با نماد $\Supp(M)$ نمایش می‌دهیم را به صورت زیر تعریف می‌کنیم
+$$\Supp(M)=\big\{{\pp}\in \Spec(R): ~~ M_{{\pp}} \neq 0\big\}.$$
+\end{definition}
+\begin{definition}[{\large ایده‌ال‌های اول وابسته} ]
+فرض کنید $M$ یک $R$-مدول باشد، مجموعه ایده‌ال‌های اول وابسته
+$M$
+را که با علامت $\Ass(M)$ نمایش می‌دهیم، عبارت است از
+$$\Ass(M)=\big\{{\pp}\in \Spec(R): \exists x \in M,~~ {\pp}=\Ann_R(x)\big\}.$$
+\end{definition}
+\begin{lemma}\label{supp}
+فرض کنید $M$ یک $R$‌-‌مدول باشد، آنگاه
+\begin{enumerate}
+\item
+$\Supp(M)=\left\{{\pp}\in \Spec(R):~\exists x\in M,~ \Ann_R(x)\subseteq {\pp}\right\}$.
+\item
+$M\neq 0$
+اگر و تنها اگر $\Supp_R(M)\neq \emptyset$.
+\item
+اگر $M$ یک $R$-مدول با تولید متناهی باشد، آنگاه
+$\Supp(M)=V\big(\Ann_R(M)\big)$.
+\item
+اگر $I$ ایده‌لی از حلقه $R$ (نه لزومأ نوتری) باشد آنگاه
+$\Supp(R/I)=V(I)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+رجوع شود به لم ۲۰ از فصل ۹ در
+\cite{sharp}
+و تمرین ۱۹ از فصل ۳ در
+\cite{atiyah}.
+\end{proof}
+\begin{definition}[{\large بعد حلقه} ]
+بعد حلقه $R$ را با $\dim(R)$ نشان داده و به صورت زیر تعریف می‌کنیم
+$$ \dim(R)=\sup\big\{n\in\Bbb N_{\dis 0}:~~ {{\pp}}_0 \varsubsetneq {{\pp}}_1 \varsubsetneq \ldots\varsubsetneq {{\pp}}_n ~, ~ {\pp}_i \in \Spec(R)~ ;~ i=0,\ldots,n\big\}.$$
+\end{definition}
+\begin{definition}\label{dimR/I}
+فرض کنید $I$ ایده‌الی از حلقه $R$ باشد، بُعد $I$ که با $\dim I$ نمایش می‌دهیم را همان $\dim R/I$ تعریف می‌کنیم. یعنی
+\begin{align*}
+\dim I=\dim (R/I) &=\sup\big\{n\in\Bbb N_{\dis 0}:~~\frac{{\pp}_0}{I }\varsubsetneq \frac{{\pp}_1}{I} \varsubsetneq \ldots\varsubsetneq\frac{{\pp}_n}{I} ~,~ {\pp}_i \in \Spec(R)~ ;~ i=0,\ldots,n\big\}\\
+&=\sup\big\{n\in\Bbb N_{\dis 0}:~~I\subseteq {\pp}_0 \varsubsetneq {\pp}_1 \varsubsetneq \ldots\varsubsetneq {\pp}_n\big \}.
+\end{align*}
+\end{definition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% شروع بخش دوم
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{{ مفاهیم و قضایایی از جبر همولوژی }}
+\begin{definition}[{\large $n$-اُمین مدول همولوژی} ]
+یک همبافت
+نزولی از $R$-مدول‌ها، یک دنباله از $R$-همریختی‌های
+\begin{displaymath}
+\xymatrix{
+{\bf C}_{\bullet}{:\cdots} \ar[r] & {C_{n+1}}\ar[r]^{d_{n+1}}&{C_n} \ar[r]^{d_n} & C_{n-1} \ar[r] & {\cdots}}
+\end{displaymath}
+است به طوری که برای هر
+$n \in {\Bbb Z}$
+داشته باشیم
+$d_n o~ d_{n+1} = 0$.
+برای هر همبافت نزولی
+$\bf {C_{\bullet}}$
+و هر
+$n \in {\Bbb Z}$
+تعریف می‌کنیم
+$$B_n({\bf {C_{\bullet}}})=\Ima d_{n+1}~~~~~~~~~~~~~~~~,~~~~~~~~~~~~~~~~~Z_n({\bf C_{\bullet}})=\kernn d_n $$
+و $n$-اُمین مدول همولوژی همبافت $\bf C_{\bullet}$ را تعریف می‌کنیم
+$$ H_n({\bf{ C_{\bullet}}})=\frac{Z_n(\bf{ C_{\bullet)}}}{B_n(\bf {C_{\bullet}})}\cdot$$
+\end{definition}
+\begin{definition}[\large $n$-اُمین مدول کوهمولوژی]
+یک همبافت صعودی از $R$-مدول‌ها، یک دنباله از $R$-همریختی‌های
+\begin{displaymath}
+\xymatrix{
+{\bf C}^{\bullet}{:\cdots} \ar[r] & {C^{n-1}}\ar[r]^{d^{n+1}}&{C^n} \ar[r]^{d^n} & C^{n+1} \ar[r] & {\cdots}}
+\end{displaymath}
+است به طوری که برای هر
+$n \in {\Bbb Z}$
+داشته باشیم
+$d^n o~ d^{n-1} = 0$.
+برای هر همبافت صعودی
+$\bf {C^{\bullet}}$
+و هر
+$n \in {\Bbb Z}$
+تعریف می‌کنیم
+$$B^n({\bf {C^{\bullet}}})=\Ima d^{n-1}~~~~~~~~~~~~~~~~,~~~~~~~~~~~~~~~~~Z^n({\bf C^{\bullet}})=\kernn d^n $$
+و $n$-اُمین مدول کوهمولوژی همبافت $\bf C^{\bullet}$ را تعریف می‌کنیم
+$$ H^n({\bf{ C^{\bullet}}})=\frac{Z^n(\bf{ C^{\bullet)}}}{B^n(\bf {C^{\bullet}})}\cdot$$
+\end{definition}
+\begin{theo}\label{TH_n}
+فرض کنید $T$ یک تابعگون جمعی دقیق از رسته $R$-مدول‌ها به رسته $R'$-مدول‌ها باشد. در این صورت
+برای $R$-همبافت‌های ${\bf C_\bullet }$ و ${\bf C^\bullet }$ داریم
+\begin{enumerate}
+\item
+اگر $T$ تابعگونی همورد باشد آنگاه برای هر $n\in \Bbb Z$،
+$$H_n(T({\bf C_{\bullet}})) \cong T(H_n({\bf C_{\bullet}})),\quad H^n(T({\bf C^{\bullet}})) \cong T(H^n({\bf C^{\bullet}})).$$
+\item
+اگر $T$ تابعگونی پادورد باشد آنگاه برای هر $n\in \Bbb Z$،
+$$H^n(T({\bf C_{\bullet}})) \cong T(H_n({\bf C_{\bullet}})),\quad H_n(T({\bf C^{\bullet}})) \cong T(H^n({\bf C^{\bullet}})).$$
+\end{enumerate}
+\end{theo}
+\begin{proof}
+رجوع شود به قضیه 23 از فصل 8 و قضیه 3 از فصل 11 در
+\cite{foxby}.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%شروع بخش سوم- کافیست دستور \section{•} را بنویسید
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

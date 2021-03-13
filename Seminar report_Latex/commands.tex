@@ -1,0 +1,288 @@
+% در این فایل، دستورها و تنظیمات مورد نیاز، آورده شده است.
+%-------------------------------------------------------------------------------------------------------------------
+
+% در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این چهار بسته، حتماً باید فراخوانی شود
+\usepackage{amsthm,amssymb,amsmath,mathrsfs,mathtools}
+\usepackage{leftidx}
+\usepackage{upgreek}
+\RequirePackage{etex}
+\usepackage{float}
+\reserveinserts{30}
+% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+%\usepackage[pagebackref=true,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
+\usepackage[pagebackref=false]{hyperref}
+\usepackage{setspace} % for switching between double/single space in document
+% بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
+\usepackage[top=25mm, bottom=25mm, left=25mm, right=30mm]{geometry}
+\usepackage{titlesec}   
+% بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
+\usepackage{color,graphicx} % inserting images
+% بسته‌ای برای رسم کادر
+\usepackage{framed} 
+% بسته‌‌ای برای چاپ شدن خودکار تعداد صفحات در صفحه «معرفی پایان‌نامه»
+\usepackage{lastpage}
+% بسته‌‌ای برای ایجاد دیاگرام‌های مختلف
+
+\usepackage[arc,all]{xy}
+\usepackage{tikz}
+%\usepackage{tikz-cd}
+%\usepackage{tkz-graph}   
+\usetikzlibrary{shapes,arrows,positioning,matrix,decorations.markings}
+%برای چرخش جدول
+\usepackage{rotating}
+%برای کامنت کردن خطوط-کافیست خط زیر را فعال کنید و متنی که میخواهید در پی دی اف ظاهر نشود را درون   \begin{comment} و     \end{comment}  قرار دهید.
+%\usepackage{verbatim}
+% بسته‌ لازم برای تنظیم سربرگ‌ها
+\usepackage{fancyhdr}
+% بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+\usepackage[nottoc]{tocbibind}
+% دستورات مربوط به ایجاد نمایه
+\usepackage{makeidx}
+\makeindex
+
+%دستوراتی برای ایجاد زیرنویس افقی
+
+\usepackage{zref-perpage}
+
+
+
+%برای فایل نمادها
+%\usepackage{supertabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+\usepackage[extrafootnotefeatures]{xepersian}
+\twocolumnfootnotes
+\usepackage{mypackage}
+\zmakeperpage{footnote}
+%برای جایگزینی خط تیره به جای نقطه در عنوان قضیا و تعاریف
+\SepMark{-}
+
+% از revision 118 زی‌پرشین به بعد، وارد کردن دستور زیر لازم نیست. توجه داشته باشید که در صورت  غیرفعال کردن این دستور، از فونت پیش‌فرض لاتک برای کلمات انگلیسی استفاده خواهد شد.
+\setlatintextfont[ExternalLocation,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic}]{lmroman10-regular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% چنانچه می‌خواهید اعداد در فرمول‌ها، فارسی باشد، خط زیر را نیز فعال کنید
+\setdigitfont{PGaramond}
+% تعریف قلم‌های فارسی و انگلیسی برای استفاده در بعضی از قسمت‌های متن
+\settextfont[Scale=1.1]{XB Zar}
+%\defpersianfont\titr[Scale=1]{XB Titre}
+\defpersianfont\nastaliq[Scale=1.5]{IranNastaliq}
+%\defpersianfont\traffic[Scale=1]{B Traffic}
+\defpersianfont\nazanin[Scale=1]{B Nazanin}
+%\defpersianfont\yekan[Scale=1]{B Yekan}
+\defpersianfont\mitra[Scale=1.3]{Mitra}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستوری برای حذف کلمه «چکیده»
+%\renewcommand{\abstractname}{}
+% دستوری برای حذف کلمه «abstract»
+%\renewcommand{\latinabstract}{}
+% دستوری برای تغییر نام کلمه «اثبات» به «برهان»
+\renewcommand\proofname{\textbf{برهان}}
+% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «منابع و مآخذ»
+\renewcommand{\bibname}{منابع و مآخذ}
+%مربع سیاه در آخر اثبات
+%\def\qedsymbol{\blacksquare}
+
+%اضافه کردن کلمات صفحه و عنوان در فهرست و وسط چین شدن کلمه فهرست
+\makeatletter
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \if@RTL\leftskip\else\rightskip\fi \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\if@RTL\rightskip\else\leftskip\fi\@tempdima
+      \hskip -\if@RTL\rightskip\else\leftskip\fi
+      #1\nobreak\leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+        mu$}\hfill \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+  
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \centerline{\huge\bfseries\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \vskip 40\p@
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+    
+    \renewcommand{\@starttoc}[1]{%
+  \hboxR to \textwidth{عنوان \hfill صفحه} 
+  \begingroup
+    \makeatletter
+    \@input{\jobname.#1}%
+    \if@filesw
+      \expandafter\newwrite\csname tf@#1\endcsname
+      \immediate\openout \csname tf@#1\endcsname \jobname.#1\relax
+    \fi
+    \@nobreakfalse
+  \endgroup}
+  
+\makeatother
+%%%%%%%%%%%%%%وسط چین شدن نام فصلها%%%%%%%%%%%%
+ %\titleformat{\chapter}[display]
+% {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+%  \titlespacing{\chapter}{3pc}{3cm}{1cm}[3pc]
+  
+ 
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+% دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+
+\theoremstyle{theorem}
+\newtheorem{theo}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{prop}[definition]{گزاره}
+\newtheorem{coro}[definition]{نتیجه}
+\newtheorem{remark}[definition]{ملاحظه}
+\newtheorem{nok}[definition]{نکته}
+\newtheorem{nok-def}[definition]{نکته و تعریف}
+\newtheorem{def-nok}[definition]{تعریف و نکته}
+\theoremstyle{definition}
+\newtheorem{ex}[definition]{مثال}
+\newtheorem{conj}[definition]{فرضیه}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%تعریف چند دستور جدید پرکاربرد در متن پایان نامه
+% تعریف دستورات جدید برای خلاصه نویسی و راحتی کار در هنگام تایپ فرمول‌های ریاضی
+\def\opn#1#2{\def#1{\operatorname{#2}}} % to make operators
+\opn\reg{reg}
+\opn\Supp {Supp}
+\opn\Ass { Ass}
+\opn\depth {depth}
+\opn\grade {grade}
+\opn\Sym {Sym}
+\opn\Spec {Spec}
+\opn\Max { Max}
+\opn\Min { Min}
+\opn\Ext {Ext}
+\opn\Tor {Tor}
+\opn\Ann { Ann}
+\opn\rank {rank}
+\opn\codim {codim}
+\opn\htt {ht}
+\opn\pd {pd}
+\opn\id {id}
+\opn\Hom { Hom}
+\opn\Ima {Im}
+\opn\coker {coker}
+\opn\kernn {Ker}
+\opn\mindeg { mindeg}
+\opn\degi { deg}
+\opn\Tot {Tot}
+\opn\EN {EN}
+%maximal and prime Ideals 
+\newcommand\pp {\mathfrak{p}}
+\newcommand\mm {\mathfrak{m}}
+\newcommand\nn {\mathfrak{n}}
+
+\newcommand\Ss {\mathcal{S}}
+%Monomial Ideals
+\opn\sat {sat}
+\opn\Mon {Mon}
+\opn\Char {Char}
+\opn\ini {in_{<}}
+\opn\gini {gin_{<}}
+\opn\Gin {Gin}
+\opn\inirev {in_{\underset{\mathrm{rev}}{<}}}
+\opn\Socle {Socle}
+\newcommand\dis {\displaystyle}
+\newcommand\lex {\underset{\mathrm{lex}}{<}}
+\newcommand\rev {\underset{\mathrm{rev}}{<}}
+\newcommand\plex {\underset{\mathrm{purelex}}{<}}
+\newcommand\inlex {\mathrm{in}_{\underset{\mathrm{lex}}{<}}}
+\newcommand\inrev {\mathrm{in}_{\underset{\mathrm{rev}}{<}}}
+%matrix
+\opn\GLn {GL_n}
+\opn\Mn {M_n}
+%System for Doing Computation in Commutative Algebra
+\opn\cocoa {CoCoA}
+\opn\maca {Macaulay2}
+%absolute function
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\upbraket}[1]{\lceil#1\rceil}
+\newcommand{\bigupbraket}[1]{\Big\lceil#1\Big\rceil}
+% تعریف دستورات جدید برای خلاصه نویسی و راحتی کار در هنگام تایپ فرمول‌های ریاضی
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\rM}{\mathrm{M}}
+\newcommand{\rC}{\mathrm{C}}
+\newcommand{\rV}{\mathrm{V}}
+\newcommand{\ls}{\mathrm{LSC}_{+}(X)}
+\newcommand{\ce}{\mathrm{C}^{*}(X)}
+\newcommand{\lsc}{\mathrm{LSC}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\bt}{\begin{theorem}}
+\newcommand{\et}{\end{theorem}}
+\newcommand{\bl}{\begin{lemma}}
+\newcommand{\el}{\end{lemma}}
+\newcommand{\bc}{\begin{corollary}}
+\newcommand{\ec}{\end{corollary}}
+\newcommand{\bp}{\begin{proof}}
+\newcommand{\ep}{\end{proof}}
+\newcommand{\be}{\begin{example}}
+\newcommand{\ee}{\end{example}}
+\newcommand{\bd}{\begin{definition}}
+\newcommand{\ed}{\end{definition}}
+\newcommand{\ba}{\begin{align}}
+\newcommand{\ea}{\end{align}}
+\newcommand{\no}{\nonumber}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن سربرگ صفحات
+\pagestyle{plain}
+%\pagestyle{fancy}
+% commands to print the page number in header
+
+%\cfoot{}
+%\lhead{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%برای تغییر فونت و سایز تیتر فصل ها، بخش ها و زیربخش ها-
+%\setpartnamefontsize{\Huge} % set \partname and \thepart font size
+%\setparttitlefontsize{\Huge} % set part title font size
+%برای تغییر فونت و سایز تیتر فصل ها
+\setchapternamefontsize{\huge} % set \chaptername and \thechapter fontsize
+\setchaptertitlefontsize{\huge} % set chapter title font size
+%برای تغییر فونت و سایز تیتر بخش ها
+\setsectionfontsize{\Large} % set section font size
+%برای تغییر فونت و سایز تیتر زیربخش ها
+\setsubsectionfontsize{\large} % set subsection font size
+%برای تغییر فونت و سایز تیتر زیر زیر بخش ها
+\setsubsubsectionfontsize{\normalsize} % set subsubsection font size
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%معرفی پوشه محل ذخیره عکسهای درون پایان نامه
+\graphicspath{{images/}}
+%\textheight=24cm%تنظیم طول متن   
+%\textwidth=15cm%تنظیم عرض متن  
+%\topmargin=-.3cm%تنظیم حاشیه بالای صفحه 
+%\oddsidemargin=0cm%تنظیم حاشیه سمت چپ صفحه 
+%\headsep=1cm%     فاصله متن از سر برگ   
+%\footskip=1cm% فاصله شماره صفحه از انتهای متن 
+%\pagestyle{headings}
+%\renewcommand{\baselinestretch}{2}%فاصله بین خطوط

@@ -1,0 +1,76 @@
+\chapter{جبر ریس}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% به دستورات زیر دست نزنید
+\thispagestyle{empty}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{جبر ریس و عدد نظم}
+\begin{definition}\label{bigraded-def}
+فرض کنید $R$ یک حلقه باشد و $\{R_{(i,j)}\}_{(i,j)\in {\Bbb Z^2}}$ خانواده ای از زیرگروه‌های جمعی $R$ باشد.
+$R$
+را یک حلقه
+مدرجِ دوگانه\footnoteC{Bigraded ring}
+گوئیم، هرگاه
+\begin{enumerate}
+\item
+$R=\underset{(i,j)\in \Bbb Z^2}{\oplus } R_{(i,j)}$.
+\item
+برای هر $(i,j),(i',j') \in\Bbb Z^2$ داشته باشیم~~ $R_{(i,j)}R_{(i',j')}\subseteq R_{(i+i',j+j')}$.
+\end{enumerate}
+همچنین $R$-مدول $M$ را مدرج دوگانه نامیم هرگاه به صورت
+$M=\underset{(i,j)\in \Bbb Z^2}{\oplus } M_{(i,j)}$
+باشد که در آن هر
+$M_{(i,j)}$
+یک زیرگروه جمعی $M$ است و برای هر 
+$(i,j),(i',j') \in\Bbb Z^2$،~~
+$R_{(i,j)}M_{(i',j')}\subseteq M_{(i+i',j+j')}$
+{\large{توجه:}}
+به همین ترتیب می توان حلقه و مدول مدرج چندگانه
+\footnoteC{Multigraded} 
+را تعریف نمود.
+\end{definition}
+\begin{remark}\label{rees-reg}
+فرض کنید $S=K[x_1,\ldots,x_n]$ حلقه‌ی چندجمله‌ای‌ روی میدان $K$ و $I\subseteq S$ یک ایده‌ال با تولید یکسان از درجه $d$ با مولد‌های $f_1,\ldots,f_m$ باشد. در این صورت جبر ریسِ حاصل از صافی $I$-‌اَدیک، یعنی 
+$$\mathcal{R}(I)=\underset{j\in \Bbb N_0}{\oplus}I^j t^j=S[f_1t,\ldots,f_mt]=K[x_1,\ldots,x_n,f_1t,\ldots,f_mt]\subseteq S[t]$$
+را می‌توان با تعریف $\degi(x_i)=(1,0)$ برای هر 
+$1\leq i\leq n$
+و $\degi(f_jt)=(0,1)$ برای 
+$j=1,\ldots,m$،
+به یک مدول مدرج دوگانه تبدیل نمود.\\
+در تعریف \ref{T-bigraded}،
+دیدیم که $T=S[y_1,\ldots,y_n]$ به گونه‌ای طبیعی یک حلقه مدرج دوگانه می‌باشد.
+همریختی طبیعی
+$\varphi:~T\longrightarrow \mathcal{R}(I)$
+با ضابطه $\varphi(x_i)=x_i$ و $\varphi(y_j)=f_jt$، برای $i=1,\ldots,x_n$ و $j=1,\ldots,m$، یک همریختی پوشا بین $K$-‌جبرهای مدرج دوگانه تعریف می‌کند
+که به وضوح $\mathcal{R}(I)$
+را به یک $T$-‌مدول متناهی مولد مدرجِ دوگانه تبدیل می‌کند.\\
+حال گیریم 
+\begin{displaymath}
+\xymatrix{
+{\bf F}:~~0\ar[r] & {F_s}\ar[r]&{\cdots} \ar[r] & F_1 \ar[r] &F_0 \ar[r] &\mathcal{R}(I) \ar[r] &0}
+\end{displaymath}
+تحلیل آزاد مدرج دوگانه مینیمال $T$-‌مدول $\mathcal{R}(I)$ باشد.
+که در آن برای هر
+$i=0,\ldots,s$
+داریم
+$F_i=\underset{j}{\oplus}T(-a_{ij},-b_{ij})$.
+ساختار $T$-مدولی  
+$\mathcal{R}(I)$
+توسط تابع $\varphi$ مشخص می‌شود و داریم
+$$\mathcal{R}(I)\cong T/{\kernn\varphi}$$
+بنا بر تعریف
+\ref{reg-bigraded}،
+ عدد نظم وابسته به $x$ برای $\mathcal{R}(I)$ به صورت زیر است
+$$\reg_x(\mathcal{R}(I))=\max\left\{a_{ij}-i:~i,j\in N_0\right\}.$$
+در فصل \ref{regularity-asli} نشان می‌دهیم که برای همه‌ی ایده‌ال‌های با تولید یکسان از درجه $d$،
+$$\reg(I^n)\leq nd+\reg_x(\mathcal{R}(I)).$$
+که در آن $\mathcal{R}(I)$
+جبر ریسِ حاصل از صافی $I$-‌اَدیک، است. از این فرمول که رومر
+\footnoteC{R\"omer}
+در 
+\cite{romer}
+اثبات نمود، می‌توان نتیجه گرفت که همه‌ی توان‌های $I$ تحلیل خطی دارند هرگاه 
+$\reg_x(\mathcal{R}(I))=0$.
+و می‌گوییم $I$ در شرط $x$ صدق می‌کند هرگاه 
+$\reg_x(\mathcal{R}(I))=0$.\\
+\end{remark}
